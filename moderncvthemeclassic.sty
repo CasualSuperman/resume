@@ -24,12 +24,18 @@
 % color options
 % blue (default option)
 \DeclareOption{blue}{}
+% darkblue
+\newif\if@colordarkblue\@colordarkbluefalse
+\DeclareOption{darkblue}{\@colordarkbluetrue}
 % orange
 \newif\if@colororange\@colororangefalse
 \DeclareOption{orange}{\@colororangetrue}
 % green
 \newif\if@colorgreen\@colorgreenfalse
 \DeclareOption{green}{\@colorgreentrue}
+% darkgreen
+\newif\if@colordarkgreen\@colordarkgreenfalse
+\DeclareOption{darkgreen}{\@colordarkgreentrue}
 % red
 \newif\if@colorred\@colorredfalse
 \DeclareOption{red}{\@colorredtrue}
@@ -90,11 +96,21 @@
   \definecolor{sectionrectanglecolor}{rgb}{0.75,0.75,0.75}
   \definecolor{sectiontitlecolor}{rgb}{0.35,0.35,0.35}
   \definecolor{subsectioncolor}{rgb}{0.35,0.35,0.35}\fi
+\if@colordarkblue
+  \definecolor{addresscolor}{RGB}{20,30,105}
+  \definecolor{sectionrectanglecolor}{RGB}{20,40,110}
+  \definecolor{sectiontitlecolor}{RGB}{20,30,105}
+  \definecolor{subsectioncolor}{RGB}{20,30,105}\fi
 \if@colordarkred
   \definecolor{addresscolor}{RGB}{165,0,30}
   \definecolor{sectionrectanglecolor}{RGB}{170,10,40}
   \definecolor{sectiontitlecolor}{RGB}{165,0,30}
   \definecolor{subsectioncolor}{RGB}{165,0,30}\fi
+\if@colordarkgreen
+  \definecolor{addresscolor}{RGB}{20,105,30}
+  \definecolor{sectionrectanglecolor}{RGB}{20,110,40}
+  \definecolor{sectiontitlecolor}{RGB}{20,105,30}
+  \definecolor{subsectioncolor}{RGB}{20,105,30}\fi
 
 % fonts
 \if@roman

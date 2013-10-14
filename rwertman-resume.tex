@@ -1,0 +1,76 @@
+%-----------------------------------------
+% Michael Wright
+% Resumé
+%
+% URL: http://github.com/mdwrigh2/resume
+% This document is covered under the Creative Commons Attribution 3.0 Unported License
+%-----------------------------------------
+
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[11pt,letterpaper,final]{moderncv}
+\usepackage{fontspec}
+\moderncvtheme[darkblue]{classic}
+
+% DOCUMENT LAYOUT
+\usepackage[scale=0.85]{geometry}
+\setlength{\hintscolumnwidth}{2cm}
+\AtBeginDocument{\recomputelengths}
+% FONTS
+\usepackage[utf8]{inputenc}
+\defaultfontfeatures{Mapping=tex-text} % converts LaTeX specials (``quotes'' --- dashes etc.) to unicode
+\usepackage{colors}
+\definecolor{hackNY}{RGB}{230,35,33}
+
+% Remove % to set to different fonts
+%\setromanfont [Ligatures={Common},Numbers={OldStyle}]{Adobe Caslon Pro}
+%\setmonofont[Scale=0.8]{Monaco} 
+
+% ---- CUSTOM AMPERSAND
+\newcommand{\amper}{{\fontspec[Scale=.95]{Adobe Caslon Pro}\selectfont\itshape\&}}
+
+% ---- MARGIN YEARS
+%\newcommand{\years}[1]{\marginpar{\scriptsize #1}}
+
+
+% PDF SETUP
+% ---- FILL IN HERE THE DOC TITLE AND AUTHOR
+
+
+% Personal Information 
+\firstname{Robert}
+\familyname{Wertman}
+\address{3916 Woodfox Dr.}{Charlotte, NC 28277}
+\mobile{(980) 254-0764}
+\email{bobby@casualsuperman.com}
+%\homepage{www.derefnull.com/about}
+
+\title{Robert Wertman's Resume}
+
+\nopagenumbers{}
+
+\begin{document}
+
+\maketitle
+
+\section{Education}
+\cventry{Fall 2009 - Summer 2013}{Computer Science \& Mathematics, Western Carolina University}{Cullowhee, NC}{}{}{CS Major GPA: 3.34}
+\section{Computer Skills}
+  \cvline{Programming Languages: (in order of familiarity)}{Go, JavaScript, Java, Python, C, PHP, Scheme}
+  \cvline{Other Languages:}{HTML, CSS, LESS, SQL}
+  \cvline{Frameworks:}{jQuery, Django}
+  \cvline{Systems/Tools:}{Linux, Windows, Makefile, vim, git, \LaTeX}
+  \cvline{Technologies:}{MongoDB, MySQL, SQLite}
+\section{Experience}
+  \cventry{Summer 2012}{Software Engineering Intern}{LocalResponse}{New York, NY}{}{
+    \begin{itemize}
+      \item Designed and implemented a statistic aggregation section of the internal administration website.
+      \item Implemented a report generator that used MapReduce to populate statistics for the new section.
+      \item Created a tool to analyze Twitter followers, in order to improve heuristics for targeting intents.
+    \end{itemize}
+  }
+\section{Extra}
+  \cvlistitem{\href{http://hackny.org/}{\color{hackNY}hackNY} Fellow, 2012}
+  \cvlistitem{Contributor to open source projects - see \url{https://github.com/CasualSuperman}}
+\end{document}
